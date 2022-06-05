@@ -1,0 +1,104 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.team-section{
+	font-family: 'Lato', sans-serif;
+}
+
+.team-section{
+	width: 100%;
+}
+.team-section .container{
+	width: 80%;
+	margin: auto;
+}
+.team-section .container .row .title{
+	text-align: center;
+	margin-top: 25px;
+}
+.team-section .container .row .title h1{
+	font-size: 35px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: #eb6234;
+}
+.team-section .container .row .title p{
+	font-size: 18px;
+	font-family: sans-serif;
+	margin: 20px 0px;
+	color: #a3a3a3;
+}
+
+.team-section .container .team-card{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 20px;
+	margin-top: 15px;
+}
+.team-section .container .team-card .card{
+	width: 100%;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+}
+.team-section .container .team-card .card:hover{
+	background-color: #f3f3f3;
+	transition: 0.3s;
+}
+.team-section .container .team-card .card .image-section img{
+	height: 176px;
+	width: 176px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+}
+.team-section .container .team-card .card .content{
+	width: 100%;
+	text-align: center;
+}
+.team-section .container .team-card .card .content h1{
+	font-size: 27px;
+	margin-top: 10px;
+	letter-spacing: 1.5px;
+	color: #639ab8;
+}
+.team-section .container .team-card .card .content h4{
+	font-size: 17px;
+	margin-top: 15px;
+	letter-spacing: 1.5px;
+	color: #6e6e6e;
+}
+.content p{
+	display: flex;
+	justify-content: center;
+}
+ .content p a img{
+	width: 30px;
+	height: 30px;
+	line-height: 1.5;
+	margin: 15px 10px;
+}
+ .content p a img:hover{
+	transform: scale(1.3);
+	transition: 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width:1220px) {
+	.team-section .container .team-card{
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 20px;
+	}
+}
+@media screen and (max-width:600px) {
+	.team-section .container .team-card{
+		grid-template-columns: repeat(1,1fr);
+		grid-gap: 20px;
+	}
+}
+
