@@ -1,0 +1,119 @@
+
+
+@media screen and (max-width:950px) {
+    .navbar{
+        height: 50vh;
+        flex-direction: column;
+        transition: all 0.5s ease-out;
+        opacity: 0.9;
+    }
+    .navbar ul{
+        flex-direction: column;
+        position: static;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .navbar ul li{
+        margin: 6px 0px;
+    }
+    .navbar div h2{
+        position: static;
+        font-size: 30px;
+    }
+    .buttons{
+        position: static;
+    }
+    .burger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 12px;
+    }
+    .line{
+        width: 33px;
+        background-color: white;
+        height: 4px;
+        margin: 4px 0px;
+        border-radius: 10px;
+    }
+    .h-nav{
+        /* transition: all 0.5s ease-out; */
+        height: 50px;
+        /* opacity: 0.9; */
+    }
+    .title{
+        margin-top: 5%;
+    }
+    .v-class{
+        display: none !important;
+    }
+}
+@media screen and (max-width:650px) {
+    #home h1{
+        font-size: 2rem;
+    }
+    #home h2{
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width:550px) {
+    #home h1{
+        font-size: 1.7rem;
+    }
+    #home h2{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:450px) {
+    #home h1{
+        font-size: 2rem;
+    }
+    #home h2{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width:350px) {
+    #home h1{
+        font-size: 1.7rem;
+    }
+    #home h2{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:300px) {
+    #home h1{
+        font-size: 1.2rem;
+    }
+    #home h2{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:250px) {
+    #home h1{
+        font-size: 3vh;
+    }
+    #home h2{
+        font-size: 2vh;
+    }
+}
+@media screen and (max-width:150px) {
+    #home h1{
+        font-size: 2vh;
+    }
+    #home h2{
+        font-size: 1vh;
+    }
+}
+@media  screen and (max-width:420px) {
+    footer{
+        font-size: 13px;
+    }
+}
+@media  screen and (min-width:1500px) {
+    #home h1{
+        font-size: 3.6rem;
+    }
+    #home h2{
+        font-size: 3.3rem;
+    }
+}

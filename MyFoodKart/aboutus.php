@@ -1,0 +1,134 @@
+<?php 
+include 'config.php';
+session_start();
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+  $loggedin= true;
+  $userId = $_SESSION['userId'];
+  $username = $_SESSION['username'];
+}
+else{
+  $loggedin = false;
+  $userId = 0;
+}
+$countsql = "SELECT SUM(`itemQuantity`) FROM `viewcart` WHERE `userId`=$userId"; 
+$countresult = mysqli_query($link, $countsql);
+$countrow = mysqli_fetch_assoc($countresult);      
+$count = $countrow['SUM(`itemQuantity`)'];
+if(!$count) {
+  $count = 0;
+}?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Us | MyFoodKart</title>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="phone.css">
+	<link rel="stylesheet" href="Aboutus.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Lato&family=Lobster&family=Tapestry&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    span{
+		font-family: 'Quicksand';
+        color: #02ff02;
+        margin-left: 10px;
+    }
+    #logout{
+    padding: 3px 10px;
+    font-family: 'Baloo Bhai 2' , sans-serif;
+    margin-left: 10px;
+    }
+
+</style>
+<body>
+<nav class="navbar h-nav">
+        <div class="title v-class" class="v-class">
+            <h2>MyFoodKart</h2>
+        </div>
+        <ul class="nav-list v-class" class="v-class">
+            <li><a href="home_loggedin.php">Home</a></li>
+            <li><a href="menu.php">Categories</a></li>
+            <li><a href="viewOrder.php">Your Orders</a></li>
+            <li><a href="aboutus.php">About us</a></li>
+            <li><a href="contact.php">Contact us</a></li>
+        </ul>
+        <div class="buttons v-class" class="v-class">
+            <a href="viewCart.php"><button id="cart">
+                <img src="./images/cart.png" alt="">
+                <p>Cart(<?php echo $count ?>)</p>
+            </button></a>
+            <?php 
+            $user_display = $_SESSION['username'];
+            echo "<span>Welcome, $user_display</span>";
+            ?> 
+            <a href="_logout.php"><button id="logout" >Log Out</button></a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+	<div class="team-section">
+		<div class="container">
+			<div class="row">
+				<div class="title">
+					<h1>Our Team</h1>
+					<p>We are developers of this website and are studying in Dharmsinh Desai University, persuing B.tech in Computer Engineering.</p>
+				</div>
+				<hr color="#eb6234;">
+			</div>
+			<div class="team-card">
+				<div class="card">
+					<div class="image-section">
+						<img src="./images/rushi_bw.jpg" alt="">
+					</div>
+					<div class="content">
+						<h1>Rushi Gandhi</h1>
+						<h4>Front-End Developer</h4>
+						<p><a href="https://www.linkedin.com/in/rushi-gandhi-a555501a5/" target="_blank"> <img src="./images/linkedin.png" alt=""> </a><a href="https://www.instagram.com/rushi_0508/" target="_blank"><img src="./images/insta.png" alt=""></a><a href="https://github.com/Rushi0508" target="_blank"><img src="./images/git.png" alt=""></a></p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image-section">
+						<img src="./images/srushti_bw.jpg" alt="">
+					</div>
+					<div class="content">
+						<h1>Srushti Gol</h1>
+						<h4>Back-End Developer</h4>
+						<p><a href="https://www.linkedin.com/in/srushti-gol-55baa423a" target="_blank"> <img src="./images/linkedin.png" alt=""> </a><a href="https://www.instagram.com/srushti_gol/" target="_blank"><img src="./images/insta.png" alt=""></a><a href="https://github.com/Srushti-Gol" target="_blank"><img src="./images/git.png" alt=""></a></p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image-section">
+						<img src="./images/mihir_bw.jpg" alt="">
+					</div>
+					<div class="content">
+						<h1>Mihir Patel</h1>
+						<h4>Back-End Developer</h4>
+						<p><a href="https://www.linkedin.com/in/mihir-jetpariya-b09621231/" target="_blank"> <img src="./images/linkedin.png" alt=""> </a><a href="https://www.instagram.com/mihir_patel1711/" target="_blank"><img src="./images/insta.png" alt=""></a><a href="https://github.com/mihirpatel07a" target="_blank"><img src="./images/git.png" alt=""></a></p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image-section">
+						<img src="./images/hina_bw.jpg" alt="">
+					</div>
+					<div class="content">
+						<h1>Hina Jadav</h1>
+						<h4>Back-End Developer</h4>
+						<p><a href="https://www.linkedin.com/in/hina-jadav-02b703228" target="_blank"> <img src="./images/linkedin.png" alt=""> </a><a href="https://www.instagram.com/hina__21/" target="_blank"><img src="./images/insta.png" alt=""></a><a href="https://github.com/HinaJadav" target="_blank"><img src="./images/git.png" alt=""></a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="nav.js"></script>
+</body>
+</html>

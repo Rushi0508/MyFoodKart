@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body a{
+    text-decoration: none;
+}
+body button:hover{
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: rgb(43, 38, 38);
+    height: 50px;
+    opacity: 0.7;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    position: relative;
+    left: 30px;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Baloo Bhai 2', sans-serif;
+    padding: 0px 20px;
+}
+.navbar div h2{
+    position: relative;
+    left: 20px;
+    font-size: 2vw;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+    text-shadow: 1px 0 red, 0 1px red, -1px 0 red, 0 -1px red;
+}
+.buttons, .buttons button{
+    display: flex;
+    align-items: center;
+}
+.buttons button img{
+    filter: invert(100%);
+    height: 18px;
+    width: 18px;
+}
+.buttons{
+    position: absolute;
+    right: 65px;
+}
+.buttons p{
+    font-family: 'Baloo Bhai 2' , sans-serif;
+    color: white;
+}
+.buttons button{
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+#cart{
+    padding: 3px 5px;
+}
+#login{
+    padding: 3px 14px;
+    font-family: 'Baloo Bhai 2' , sans-serif;
+    margin-left: 10px;
+}
+#signup{
+    padding: 3px 10px;
+    font-family: 'Baloo Bhai 2' , sans-serif;
+    margin-left: 10px;
+}
+.navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 15px;
+}
+.buttons button:hover{
+    background-color: #ff9951;
+    border-color: rgb(184, 177, 177);
+    text-shadow: 2px 2px 4px #000;
+    transform: translateY(-0.20em);
+}
+
+section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: url('./images/home_bg.jpg') no-repeat center center/cover;
+    opacity: 0.8;
+}
+#home div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+    position: relative;
+    top: 60px;
+    line-height: 11vh;
+}
+#home h1{
+    font-size: 2.6rem;
+}
+#home h2{
+    font-size: 2.3rem;
+}
+#home h3{
+    font-size: 6vh;
+}
+#home button{
+    /* background-color: #1f1b29; */
+    color: #ffa260;
+    margin-top: 20px;
+    border: 2px solid;
+    font-size: 1em;
+    padding: 7px 15px;
+    font-family: 'Baloo Bhai 2', sans-serif;
+    transition: all 0.2s;
+    opacity: 0.8;
+    border-radius: 6px;
+}
+#home button:hover{
+    border-color: #f1ff5c;
+    color: rgb(14, 13, 13);
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(43, 38, 38);
+    height: 40px;
+    display: flex;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
