@@ -13,7 +13,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #ffedd4;
 }
 .row {
         display: grid;
@@ -43,6 +43,8 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+    padding: 10px;
+    border: 2px solid orangered;
 }
 .card-img, .card-img-top {
     border-top-left-radius: calc(.25rem - 1px);

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,9 +13,9 @@ body button:hover{
 .navbar{
     display: flex;
     align-items: center;
-    background-color: rgb(43, 38, 38);
-    height: 50px;
-    opacity: 0.7;
+    background-color: #24292f;
+    height: 55px;
+    opacity: 1;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -22,7 +23,7 @@ body button:hover{
 .navbar ul{
     display: flex;
     position: relative;
-    left: 30px;
+    left: 40px;
 }
 .navbar ul li{
     list-style: none;
@@ -30,8 +31,8 @@ body button:hover{
 .navbar ul li a{
     text-decoration: none;
     color: white;
-    font-family: 'Baloo Bhai 2', sans-serif;
-    padding: 0px 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 20px;
 }
 .navbar div h2{
     position: relative;
@@ -145,7 +146,7 @@ footer{
     background-color: rgb(43, 38, 38);
     height: 40px;
     display: flex;
-    opacity: 0.7;
+    opacity: 1;
     justify-content: center;
     align-items: center;
     color: whitesmoke;

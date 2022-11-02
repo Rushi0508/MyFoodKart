@@ -19,10 +19,10 @@
 		<form action="login.php" method="POST" class="login-email">
 			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
 			<div class="input-group">
-				<input type="text" placeholder="Username" name="uname" required>
+				<input type="text" value="<?php if (isset($_COOKIE["user"])){echo $_COOKIE["user"];}?>" placeholder="Username" name="uname" required>
 			</div>
 			<div class="input-group">
-				<input type="password" placeholder="Password" name="psw" required>
+				<input type="password" value="<?php if (isset($_COOKIE["pass"])){echo $_COOKIE["pass"];}?>" placeholder="Password" name="psw" required>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Login</button>
@@ -50,6 +50,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
             $_SESSION['userId'] = $userId;
+            setcookie("user", $row['username'], time() + (86400 * 30)); 
+            setcookie("pass", $password, time() + (86400 * 30)); 
             header("location: /MyFoodKart/home_loggedin.php?loginsuccess=true");
             exit();
         } 

@@ -253,7 +253,7 @@ if(!$count) {
                                     <td data-label="Order Id">' . $orderId . '</td>
                                     <td  data-label="Address">' . substr($address, 0, 20) . '...</td>
                                     <td  data-label="Phone No">' . $phoneNo . '</td>
-                                    <td  data-label="Amount">' . $amount . '</td>
+                                    <td  data-label="Amount"> Rs. ' . $amount . '</td>
                                     <td  data-label="Payment Mode">' . $paymentMode . '</td>
                                     <td  data-label="Order Date">' . $orderDate . '</td>
                                 </tr>';
