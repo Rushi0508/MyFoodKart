@@ -1,5 +1,5 @@
 
-# Project Title
+# MyFoodKart - A Food Ordering Web App
 
 Name of our website is 'MyFoodKart' which is a Food Ordering Site.
 
